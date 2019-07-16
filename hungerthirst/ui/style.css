@@ -1,111 +1,135 @@
 @font-face {
-  font-family: 'Circular';
-  src: url("fonts/Circular-Bold.woff2") format("woff2"), url("fonts/Circular-Bold.woff") format("woff"), url("fonts/Circular-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
+	font-family: 'Circular';
+	src: url("fonts/Circular-Bold.woff2") format("woff2"), url("fonts/Circular-Bold.woff") format("woff"), url("fonts/Circular-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
 
 @font-face {
-  font-family: 'Circular';
-  src: url("fonts/Circular-Book.woff2") format("woff2"), url("fonts/Circular-Book.woff") format("woff"), url("fonts/Circular-Book.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+	font-family: 'Circular';
+	src: url("fonts/Circular-Book.woff2") format("woff2"), url("fonts/Circular-Book.woff") format("woff"), url("fonts/Circular-Book.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 
 * {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+	position: relative;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 body {
-  font-family: 'Circular', sans-serif;
-  font-weight: normal;
-  overflow: hidden;
-  height: 100%; }
+	font-family: 'Circular', sans-serif;
+	font-weight: normal;
+	overflow: hidden;
+	height: 100%;
+}
 
 .test {
-  position: absolute;
-  bottom: 0;
-  right: 0; }
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
 
 .hud {
-  position: absolute;
-  top: 50px;
-  right: 90px;
-  width: 230px; }
-  .hud .profile {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    overflow: hidden; }
-  .hud .container {
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 200px;
-    height: 70px;
-    padding: 2px 20px 15px 60px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background: rgba(24, 27, 32, 0.3);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 10px; }
-    .hud .container .type {
-      width: 122px;
-      height: 12px;
-      margin: 5px 0; }
-      .hud .container .type .svg {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: -4px;
-        width: 14px;
-        text-align: center; }
-      .hud .container .type .progress {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: -4px;
-        margin-left: 8px;
-        width: calc(100% - 22px);
-        height: 7px;
-        background-color: rgba(187, 200, 222, 0.3);
-        border-radius: 10px; }
-        .hud .container .type .progress div {
-          display: block;
-          width: 100%;
-          height: 100%;
-          background-color: #BBC8DE;
-          border-radius: 10px; }
-  .hud #hour {
-    position: absolute;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    width: 170px;
-    right: 0;
-    top: -15px; }
-  .hud .notification {
-    display: none;
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    line-height: 21px;
-    background-color: #EE5253;
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    z-index: 2;
-    border-radius: 100%;
-    top: -7px;
-    left: 0; }
-  .hud .icons {
-    position: absolute;
-    z-index: 2;
-    right: 0;
-    top: -16px; }
+	position: absolute;
+	top: 50px;
+	right: 90px;
+	width: 230px;
+}
+
+.hud .profile {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.hud .container {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 200px;
+	height: 70px;
+	padding: 2px 20px 15px 60px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background: rgba(24, 27, 32, 0.3);
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+	/* Note: backdrop-filter has minimal browser support */
+	border-radius: 10px;
+}
+
+.hud .container .type {
+	width: 122px;
+	height: 12px;
+	margin: 5px 0;
+}
+
+.hud .container .type .svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -4px;
+	width: 14px;
+	text-align: center;
+}
+
+.hud .container .type .progress {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -4px;
+	margin-left: 8px;
+	width: calc(100% - 22px);
+	height: 7px;
+	background-color: rgba(187, 200, 222, 0.3);
+	border-radius: 10px;
+}
+
+.hud .container .type .progress div {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #BBC8DE;
+	border-radius: 10px;
+}
+
+.hud #hour {
+	position: absolute;
+	z-index: 2;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	width: 170px;
+	right: 0;
+	top: -15px;
+}
+
+.hud .notification {
+	display: none;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	line-height: 21px;
+	background-color: #EE5253;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	z-index: 2;
+	border-radius: 100%;
+	top: -7px;
+	left: 0;
+}
+
+.hud .icons {
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: -16px;
+}

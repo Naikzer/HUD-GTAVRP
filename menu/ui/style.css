@@ -1,131 +1,161 @@
 @font-face {
-  font-family: 'Circular';
-  src: url("fonts/Circular-Bold.woff2") format("woff2"), url("fonts/Circular-Bold.woff") format("woff"), url("fonts/Circular-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
+	font-family: 'Circular';
+	src: url("fonts/Circular-Bold.woff2") format("woff2"), url("fonts/Circular-Bold.woff") format("woff"), url("fonts/Circular-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
 
 @font-face {
-  font-family: 'Circular';
-  src: url("fonts/Circular-Book.woff2") format("woff2"), url("fonts/Circular-Book.woff") format("woff"), url("fonts/Circular-Book.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+	font-family: 'Circular';
+	src: url("fonts/Circular-Book.woff2") format("woff2"), url("fonts/Circular-Book.woff") format("woff"), url("fonts/Circular-Book.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 
 * {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+	position: relative;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 body {
-  font-family: 'Circular', sans-serif;
-  font-weight: normal;
-  overflow: hidden;
-  height: 100%; }
+	font-family: 'Circular', sans-serif;
+	font-weight: normal;
+	overflow: hidden;
+	height: 100%;
+}
 
 a {
-  display: block;
-  text-decoration: none; }
+	display: block;
+	text-decoration: none;
+}
 
 .crosshair,
 .menu-car,
 .menu-user {
-  opacity: 0; }
+	opacity: 0;
+}
 
 #cursorPointer {
-  position: absolute;
-  z-index: 999999;
-  display: none; }
+	position: absolute;
+	z-index: 999999;
+	display: none;
+}
 
 .crosshair {
-  text-align: center;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #FFFFFF;
-  border-radius: 100%;
-  position: absolute;
-  top: calc(50% - 4px);
-  left: calc(50% - 4px);
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  z-index: 200; }
+	text-align: center;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #FFFFFF;
+	border-radius: 100%;
+	position: absolute;
+	top: calc(50% - 4px);
+	left: calc(50% - 4px);
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	z-index: 200;
+}
 
 .crosshair.fadeIn {
-  width: 8px;
-  height: 8px;
-  top: calc(50% - 4px);
-  left: calc(50% - 4px);
-  z-index: 200; }
+	width: 8px;
+	height: 8px;
+	top: calc(50% - 4px);
+	left: calc(50% - 4px);
+	z-index: 200;
+}
 
 .crosshair.active {
-  width: 16px;
-  height: 16px;
-  top: calc(50% - 8px);
-  left: calc(50% - 8px);
-  background: #FFFFFF url("assets/close.png") no-repeat 4px 4px;
-  background-size: 45%; }
+	width: 16px;
+	height: 16px;
+	top: calc(50% - 8px);
+	left: calc(50% - 8px);
+	background: #FFFFFF url("assets/close.png") no-repeat 4px 4px;
+	background-size: 45%;
+}
 
 .menu {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 0;
-  z-index: 0; }
-  .menu li {
-    list-style: none;
-    width: 50%;
-    line-height: 20px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-    .menu li a {
-      font-size: 16px;
-      display: inline-block;
-      color: #181B20;
-      background: white;
-      border-radius: 30px;
-      padding: 10px 20px 10px 18px;
-      margin: 10px 0;
-      -webkit-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      will-change: transform; }
-      .menu li a:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1); }
-      .menu li a .emoji {
-        font-size: 22px;
-        margin-right: 5px;
-        display: inline-block;
-        vertical-align: middle; }
-    .menu li:nth-child(odd) {
-      text-align: right;
-      right: 60px;
-      -webkit-transform-origin: right center;
-      -ms-transform-origin: right center;
-      transform-origin: right center; }
-    .menu li:nth-child(even) {
-      left: 60px;
-      -webkit-transform-origin: left center;
-      -ms-transform-origin: left center;
-      transform-origin: left center; }
-    .menu li:nth-child(1), .menu li:nth-last-child(2) {
-      right: 20px; }
-    .menu li:nth-child(2), .menu li:nth-last-child(1) {
-      left: 20px; }
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	height: 100%;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.menu li {
+	list-style: none;
+	width: 50%;
+	line-height: 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.menu li a {
+	font-size: 16px;
+	display: inline-block;
+	color: #181B20;
+	background: white;
+	border-radius: 30px;
+	padding: 10px 20px 10px 18px;
+	margin: 10px 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	will-change: transform;
+}
+
+.menu li a:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.menu li a .emoji {
+	font-size: 22px;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.menu li:nth-child(odd) {
+	text-align: right;
+	right: 60px;
+	-webkit-transform-origin: right center;
+	-ms-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.menu li:nth-child(even) {
+	left: 60px;
+	-webkit-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.menu li:nth-child(1),
+.menu li:nth-last-child(2) {
+	right: 20px;
+}
+
+.menu li:nth-child(2),
+.menu li:nth-last-child(1) {
+	left: 20px;
+}
 
 .fadeIn {
-  opacity: 1;
-  z-index: 10; }
+	opacity: 1;
+	z-index: 10;
+}
