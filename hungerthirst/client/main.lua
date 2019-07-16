@@ -3,18 +3,18 @@
 ------------------------------------------------------------------
 
 local showHud = true                          -- Boolean to show / hide HUD
-local faim                                    -- Init hunger's variable. Set to 100 for development. 
-local soif                                    -- Init thirst's variable. Set to 100 for development. 
+local hunger                                  -- Init hunger's variable. Set to 100 for development. 
+local thirst                                  -- Init thirst's variable. Set to 100 for development. 
 
 ------------------------------------------------------------------
 --                          Functions
 ------------------------------------------------------------------
 
-function updateHungerThirstHUD(faim, soif)
+function updateHungerThirstHUD(hunger, thirst)
   SendNUIMessage({
     update = true,
-    faim = faim,
-    soif = soif
+    hunger = hunger,
+    thirst = thirst
   })
 end
 

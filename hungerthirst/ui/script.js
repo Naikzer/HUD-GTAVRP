@@ -2,8 +2,8 @@ $(document).ready(function(){
 
   window.addEventListener("message", function(event){
     if(event.data.update == true){
-      setProgress(event.data.faim,'.progress-hunger');
-      setProgress(event.data.soif,'.progress-thirst');
+      setProgress(event.data.hunger, '.progress-hunger');
+      setProgress(event.data.thirst, '.progress-thirst');
     }
   });
 
