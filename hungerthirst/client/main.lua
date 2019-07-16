@@ -10,12 +10,13 @@ local thirst                                  -- Init thirst's variable. Set to 
 --                          Functions
 ------------------------------------------------------------------
 
-function updateHungerThirstHUD(hunger, thirst)
-  SendNUIMessage({
-    update = true,
-    hunger = hunger,
-    thirst = thirst
-  })
+function updateHungerThirstHUD(hunger, thirst, inventory)
+	SendNUIMessage({
+		update = true,
+		hunger = hunger,
+		thirst = thirst,
+		inventory = inventory
+	})
 end
 
 ------------------------------------------------------------------
@@ -29,7 +30,7 @@ Citizen.CreateThread(function()
 		if showHud then
 			TriggerEvent('esx_status:getStatus', 'hunger', function(hungerStatus)
 				TriggerEvent('esx_status:getStatus', 'thirst', function(thirstStatus)
-					updateHungerThirstHUD(hungerStatus.val / 10000, thirstStatus.val / 10000)
+					updateHungerThirstHUD(hungerStatus.val / 10000, thirstStatus.val / 10000, 0)
 				end)
 			end)
 		end
@@ -39,8 +40,8 @@ end)
 -- Update hunger and thirst
 Citizen.CreateThread(function()
     while true do
-      Citizen.Wait(0)
-      SetPlayerHealthRechargeMultiplier(PlayerId(), 0)
-      updateHungerThirst()
+		Citizen.Wait(0)
+		SetPlayerHealthRechargeMultiplier(PlayerId(), 0)
+		updateHungerThirst()
     end
 end)
