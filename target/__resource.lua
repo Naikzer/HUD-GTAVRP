@@ -7,7 +7,7 @@ export "Target"
 
 -- Client Scripts
 client_scripts {
-	'client/client.lua',
+	'client.lua',
 }
 
 -- Server Scripts
